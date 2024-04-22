@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB-115 Final Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="banner">
+    <h1> Perfectly Portioned Fitness: Build Your Meal Plan [BANNER IMAGE HERE]</h1>
+    <p>Name: Jakub Bartkowiak</p>
+    <p>Course and section: 2024SP.WEB.115.0004</p>
+  </div>
+
+  <div id="entryPage">
+    <h2>User Information</h2>
+    <form id="userForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="goal">Goal for the Week:</label>
+      <textarea id="goal" name="goal"></textarea><br>
+
+      <button type="submit">Enter</button>
+    </form>
+  </div>
+
+  <div id="formPage" style="display: none;">
+    <h2> Perfectly Portioned Fitness Meal Planner</h2>
+    <div id="userData"></div>
+    <button id="saveBtn">Save</button>
+    <button id="clearBtn">Clear</button>
+
+    <form id="mealForm">
+      <!-- Meal input forms generated here  -->
+    </form>
+  </div>
+
+  <div id="outputPage" style="display: none;">
+    <h2>Your Perfectly Portioned Fitness Meal Plan</h2>
+    <button id="editBtn">Edit</button>
+    <button id="printBtn">Print</button>
+    <button id="downloadBtn">Download</button>
+
+    <table id="mealTable">
+      <!-- Meal plan table generated here -->
+    </table>
+  </div>
+
+  <script src="projectJS.js"></script>
+</body>
+</html>
