@@ -1,74 +1,86 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  padding: 20px;
+font-family: Arial, sans-serif;
+background-color: rgb(0, 51, 68);
+color: #fff;
+margin: 0;
+padding: 10px;
 }
-
 .banner {
-  text-align: center;
-  padding: 20px;
-  background-color: #222;
-  margin-bottom: 20px;
+text-align: center;
+padding: 5px;
+background-color: rgb(0, 51, 68);
+margin-bottom: 55px;
+position: relative;
 }
-
+.banner img {
+width: 98%;
+height: auto;
+}
+.banner-text {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: #fff;
+}
 h1, h2, h3 {
-  color: #fff;
+	color: #fff;
 }
-
 form {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
-
 label {
-  display: block;
-  margin-bottom: 5px;
+	display: block;
+	margin-bottom: 5px;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-}
-
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	}
 button {
-  padding: 10px 20px;
-  background-color: #555;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+	padding: 10px 20px;
+	background-color: #555;
+	color: #fff;
+	border: none;
+	cursor: pointer;
 }
-
 button:hover {
-  background-color: #777;
+	background-color: #777;
 }
-
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
 }
 
 th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #555;
+	padding: 10px;
+	text-align: left;
+	border-bottom: 2px solid #555;
+	text-overflow: ellipsis; /* Don't believe this will work with the other options, but just in case */
+	overflow: auto;
+	white-space: pre-line; /* combination of normal and pre-wrap*/
 }
+/* manual widths for each meal type by expected size*/
+#mealTable th:nth-child(1) { width: 6%; } /* Day of the Week */
+#mealTable th:nth-child(2) { width: 21%; } /* Breakfast */
+#mealTable th:nth-child(3) { width: 15%; } /* Snack 1 */
+#mealTable th:nth-child(4) { width: 20%; } /* Lunch */
+#mealTable th:nth-child(5) { width: 15%; } /* Snack 2 */
+#mealTable th:nth-child(6) { width: 23%; } /* Dinner */
 
 @media print {
-  body {
-    font-family: monospace;
-    color: #000;
-    background-color: #fff;
-  }
-
-  .banner, button {
-    display: none;
-  }
+	body {
+		font-family: monospace;
+		color: #000;
+		background-color: #fff;
+	}
+	.banner, button {
+		display: none;
+	}
 }
